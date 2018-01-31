@@ -1,0 +1,121 @@
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+#page-container {
+  width: 906px;
+  margin: 0 auto;
+  background-color: #faf9f9;
+  padding: 0 10px;
+  border: 1px solid #b0b0b0;
+}
+
+#columns::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 48%;
+}
+
+#right {
+  margin-left: 3%;
+}
+
+#header {
+  margin-bottom: 25px;
+}
+
+#header h1 {
+  margin: 0;
+  color: green;
+  font-size: 3em;
+  font-family: serif;
+  font-weight: lighter;
+}
+
+#header p {
+  margin: 0;
+}
+
+#left {
+  background-color: #f3e9c7;
+}
+
+#banner {
+  background-color: red;
+  color: white;
+  text-align: center;
+  height: 4em;
+  line-height: 2em;
+  font-weight: bolder;
+}
+
+#banner p {
+  margin: 0;
+}
+
+.home {
+  border-bottom: 2px solid red;
+  font-size: .65em;
+  margin-bottom: 15px;
+}
+
+#home-highlight {
+  width: 100%;
+}
+
+.home-container::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.home-column {
+  float: left;
+  width: 50%;
+}
+
+.home-title, .home-price {
+  background-color: #f1d575;
+  padding: 4px;
+}
+
+.home-footer h2 {
+  font-style: serif;
+}
+
+#velvet-evolution {
+  height: 380px;
+  text-align: center;
+  color: black;
+  font-size: 2.75em;
+  background-image: url('http://www.loremflickr.com/450/450');
+  padding-top: 10%;
+  font-spac
+}
+
+.photo-caption {
+  font-size: .5em;
+  margin: 10px 0 25px 0;
+}
+
+.article {
+  margin-bottom: 1px solid #000;
+}
+
+.article-author {
+  text-align: center;
+}
+
+.article-author:last-child {
+  margin-bottom: 15px;
+}
+
+.article-text img {
+  float: right;
+}
