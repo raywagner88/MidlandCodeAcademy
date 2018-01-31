@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layouts with floats</title>
+	<style>
+		#pageContainer {
+			width: 960px;
+			margin: 0 auto;
+		}
+
+		#brand {
+			width: 100%;
+			height: 75px;
+			line-height: 75px;
+			background-color: green;
+		}
+
+		#brand h1 {
+			margin: 0;
+			margin-right: 50px;
+			float: right;
+		}
+
+		#brand::after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+
+		#menu {
+			text-align: center;
+			height: 50px;
+			line-height: 50px;
+		}
+
+		#menu a {
+			padding-right: 25px;
+		}
+
+		#sidebar {
+			float: left;
+			width: 20%;
+			height: 400px;
+			background-color: red;
+		}
+
+		#sidebar ul li {
+			margin: 10px 0px;
+		}
+
+		#content {
+			width: 80%;
+			float: left;
+			height: 400px;
+			background-color:blue;
+		}
+
+		#content p {
+			margin: 0;
+			font-size: 1.5em;
+			font-weight: bold;
+			padding: 15px;
+		}
+
+		.container::after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+
+		#highlight {
+			margin-top: 25px;
+			position: relative;
+			height: 150px;
+			background-color: pink;
+			background-image: url('http://www.loremflickr.com/960/150');
+		}
+
+		#highlight-text {
+			position: absolute;
+			bottom: 0px;
+			left: 5px;
+			color: #FFF;
+		}
+
+		#highlight-text h2 {
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+
+<div id='pageContainer'>
+
+	<div id='brand'>
+		<img src='https://loremflickr.com/75/75'>
+		<h1>Company Name</h1>
+	</div>
+
+	<div id='menu'>
+		<a href='#'>Link</a>
+		<a href='#'>Link</a>
+		<a href='#'>Link</a>
+		<a href='#'>Link</a>
+		<a href='#'>Link</a>
+	</div>
+
+	<div class='container'>
+		<div id='sidebar'>
+			<ul>
+				<li>Menu Item Here</li>
+				<li>Menu Item Here</li>
+				<li>Menu Item Here</li>
+				<li>Menu Item Here</li>
+				<li>Menu Item Here</li>
+				<li>Menu Item Here</li>
+			</ul>
+		</div>
+		<div id='content'>
+			<p>
+				<img src='http://www.loremflickr.com/200/200' style='float: left; margin: 15px;'>
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			</p>
+		</div>
+	</div>
+
+	<div id='highlight'>
+		<div id='highlight-text'>
+			<h2>My Trip to Rome</h2>
+		</div>
+	</div>
+
+</div> <!-- end pageContainer -->
+
+</body>
+</html>

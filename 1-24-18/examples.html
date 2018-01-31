@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Floats</title>
+	<style>
+	body {
+		margin: 0;
+		padding-top: 50px;
+	}
+
+	.container {
+		background-color: #b0b0b0;
+		margin-bottom: 500px;
+	}
+
+	.container::after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+
+	.column {
+		height: 200px;
+		float: left;
+	}
+
+	.half {
+		width: 50%;
+	}
+
+	.third {
+		width: 33.3333%;
+	}
+
+	.column:nth-child(1){
+		background-color: green;
+	}
+
+	.column:nth-child(2){
+		background-color: red;
+	}
+
+	.column:nth-child(3){
+		background-color: blue;
+	}
+
+	#navigation-bar {
+		display: block;
+		width: 100%;
+		text-align: center;
+		background-color: #b0b0b0;
+		position: fixed;
+		top: 0px;
+	}
+
+	</style>
+</head>
+<body>
+
+<nav id="navigation-bar">
+	<a href='#'>Thing 1</a>
+	<a href='#'>Thing 2</a>
+	<a href='#'>Thing 3</a>
+</nav>
+
+<div class='container'>
+	<article class='column third'></article> 
+	<article class='column third'></article> 
+	<article class='column third'></article> 
+</div>
+
+<div class='container'>
+	<article class='column half'></article>
+	<article class='column half'></article>
+</div>
+
+</body>
+</html>

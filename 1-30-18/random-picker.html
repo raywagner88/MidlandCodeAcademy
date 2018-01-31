@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Picker</title>
+    <meta charset='UTF-8'>
+  </head>
+  <body>
+
+    <div id='list'></div>
+
+    <button id='button'>Click for random</button>
+
+    <script>
+      var names = ['brock', 'sara', 'ansleigh', 'carson'];
+
+      var list = document.getElementById('list');
+      var button = document.getElementById('button');
+      button.addEventListener('click', randomSelect);
+
+      function randomSelect(){
+
+        if(names.length === 0){
+          alert('All done');
+          return;
+        }
+
+        var random = Math.floor(Math.random() * names.length);
+
+        var name = names[random];
+        var nameIndex = names.indexOf(name);
+
+        names.splice(nameIndex, 1);
+
+        list.innerHTML += "<p>" + name + "</p>";
+      }
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homework review from 1-25-18</title>
+    <meta charset='UTF-8'>
+    <style>
+      #container {
+        width: 960px;
+        margin: 0 auto;
+        background-color: #B0B0B0;
+      }
+
+      .top-bar {
+        height: 75px;
+        background-color: #ff11ff;
+        margin-bottom: 15px;
+      }
+
+      /* push the image over to the right a bit */
+      #brand {
+        padding-left: 15px;
+      }
+
+      /* make it rouuuuunnd */
+      #brand img {
+        border-radius: 50%;
+      }
+
+      /* used to vertically center the text in the div */
+      #nav {
+        text-align: center;
+        line-height: 75px;
+      }
+
+      /* space out the links from each other */
+      #nav a {
+        padding-right: 25px;
+      }
+
+      #float {
+        margin-bottom: 25px;
+      }
+
+      #float::after {
+        content: '';
+        clear: both;
+        display: table;
+      }
+
+      .column {
+        float: left;
+      }
+
+      #sidebar {
+        width: 25%;
+        text-align: center;
+      }
+
+      #content {
+        width: 70%;
+        padding: 5px;
+      }
+
+      #content p {
+        margin: 0;
+      }
+
+      #content p img {
+        float: left;
+        margin-right: 25px;
+        margin-bottom: 25px;
+      }
+
+      /* https://css-tricks.com/absolute-positioning-inside-relative-positioning/ */
+      #photo {
+        height: 300px;
+        background-image: url('http://www.loremflickr.com/960/300');
+        position: relative;
+      }
+
+      #photo h2 {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        margin: 0;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="container">
+
+      <div class='top-bar' id="brand">
+        <img src='http://www.loremflickr.com/75/75'>
+      </div>
+
+      <div class='top-bar' id="nav">
+        <a href='#'>Link 1</a>
+        <a href='#'>Link 2</a>
+        <a href='#'>Link 3</a>
+        <a href='#'>Link 4</a>
+        <a href='#'>Link 5</a>
+        <a href='#'>Link 6</a>
+      </div> <!-- end of #nav -->
+
+      <div id='float'>
+        <div class='column' id='sidebar'>
+          <ul>
+            <li>Item here</li>
+            <li>Item here</li>
+            <li>Item here</li>
+            <li>Item here</li>
+            <li>Item here</li>
+            <li>Item here</li>
+            <li>Item here</li>
+            <li>Item here</li>
+            <li>Item here</li>
+          </ul>
+        </div>
+
+        <div class='column' id='content'>
+          <p>
+            <img src='http://www.loremflickr.com/200/200'>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+        </div>
+
+      </div> <!-- end of #float -->
+
+      <div id='photo'>
+        <h2>My fancy-schmancy photo</h2>
+      </div>
+
+    </div> <!-- end of container -->
+
+  </body>
+</html>

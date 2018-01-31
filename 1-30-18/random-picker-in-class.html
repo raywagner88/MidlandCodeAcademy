@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset='UTF-8'>
+  </head>
+  <body>
+
+    <div id='results'></div>
+    <button id='button'>Click me for a random name</button>
+
+    <script>
+
+      var names = ['laura', 'duste', 'ray', 'ernesto', 'graham', 'bijou', 'hugh', 'uwayzo'];
+
+      var button = document.getElementById('button');
+      var results = document.getElementById('results');
+
+      button.addEventListener('click', getRandomName);
+
+      function getRandomName(){
+        if(names.length === 0) {
+          alert("NO MORE NAMES");
+          return;
+        }
+
+        var randomNumber = Math.floor(Math.random() *  names.length);
+
+        var name = names[randomNumber];
+        names.splice(randomNumber, 1);
+
+        results.innerHTML += "<p>" + name + "</p>";
+      }
+
+    </script>
+
+  </body>
+</html>

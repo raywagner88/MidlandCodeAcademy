@@ -1,0 +1,10 @@
+.box { 
+	background-image: url('../1-23-18/background.png');
+	font-family: 'Verdana', 'Times New Roman', sans-serif;
+	background-color: green;
+	width: 100px;
+	height: 100px;
+	color: white;
+	padding: 6px 10px 15px 20px;
+	border: 4px inset black;	
+}
