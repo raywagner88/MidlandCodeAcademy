@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset='UTF-8'>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      #page-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      #page-container::after {
+        content: '';
+        clear: both;
+        display: table;
+      }
+
+      .column {
+        flex: auto;
+      }
+
+      #sites {
+        width: 10%;
+        background-color: #b0b0b0;
+      }
+
+      #rooms {
+        width: 25%;
+        color: white;
+        background-color: black;
+      }
+
+      #chat {
+        width: 60%;
+        position: relative;
+        background-color: goldenrod;
+      }
+
+      .toolbar {
+        height: 5vh;
+        background-color: red;
+        width: 100%;
+      }
+
+      #chat-header {
+        position: absolute;
+        top: 0;
+        left: 0
+      }
+
+      #chat-input {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      #chat-history {
+        overflow: scroll;
+        max-height: 90vh;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <div id='page-container'>
+
+      <div class='column' id='sites'>
+        <img src='http://www.loremflickr.com/75/75'>
+        <img src='http://www.loremflickr.com/75/75'>
+        <img src='http://www.loremflickr.com/75/75'>
+        <img src='http://www.loremflickr.com/75/75'>
+      </div>
+
+      <div class='column'  id='rooms'>
+        <ul>
+          <li>Room</li>
+          <li>Room</li>
+          <li>Room</li>
+          <li>Room</li>
+          <li>Room</li>
+        </ul>
+      </div>
+
+      <div class='column' id='chat'>
+
+        <div class='toolbar' id='chat-header'></div>
+
+        <div id='chat-history'>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+          <p>Chat history</p>
+        </div>
+
+        <div class='toolbar' id='chat-input'></div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
