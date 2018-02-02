@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+}
+
+header, footer {
+  height: 100px;
+}
+
+header {
+  background-color: red;
+}
+
+.container {
+  margin: 10px 0;
+}
+
+.container::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+main {
+  background-color: green;
+  width: 80%;
+}
+
+aside {
+  background-color: goldenrod;
+  width: 20%;
+}
+
+main, aside {
+  height: 200px;
+  float: left;
+}
+
+article:first-child {
+  background-color: #b0b0b0;
+}
+
+article {
+  float: left;
+  width: 50%;
+  height: 50px;
+}
+
+footer {
+  background-color: blue;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Responsive navigation using media queries</title>
+    <meta charset='UTF-8'>
+    <style>
+      /* reset the margin on the page so we don't have any default blank space */
+      body {
+        margin: 0;
+      }
+
+      /*
+       * We want to serve up the mobile optimized look first, and then as the screen size permits, make changes using media queries
+       */
+
+      /* MOBILE VIEW */
+      .nav-item {
+        background-color: #5e5127;
+        color: #FFF;
+        text-align: center;
+        margin-bottom: 3px;
+      }
+
+      .nav-item h1, .nav-item p {
+        margin: 0;
+      }
+
+      /* on mobile, no images need to be displayed-- they just take up space */
+      .nav-image {
+        display: none;
+      }
+
+      /* TWO COLUMN VIEW */
+      @media (min-width: 425px) and (max-width: 859px) {
+        /*
+         * In this view, we want there to be two columns of items. By setting the width to 50%, we'd get that, but they'd bleed together.
+         * By calculating the difference of 50% minus the total amount of margin (5px which is 2.5 on the left and the right) we'll get a TRUE 50%
+         */
+
+        .nav-item {
+          width: calc(50% - 5px);
+          float: left;
+          padding: 0;
+          margin: 3px 2.5px;
+        }
+      }
+
+      /* TWO ROW VIEW */
+      @media (min-width: 860px) and (max-width: 1079px) {
+
+        /* We continue to calculate with width with the margin deducted so it all fits on one row */
+        .nav-item {
+          width: calc(25% - 5px);
+          margin: 3px 2.5px;
+          position: relative;
+          float: left;
+        }
+
+        .nav-image {
+          display: block;
+          position: absolute;
+          /* Hacky way of vertically centering things. Take 50% of the total vertical space and subtract half of the height of the item we're centering */
+          top: calc(50% - 25px);
+          margin-left: 10px;
+        }
+      }
+
+      /* single row */
+      @media (min-width: 1080px) {
+        .nav-item {
+          width: calc(12.5% - 5px);
+          float: left;
+          text-align: center; /* center all of the text in the item */
+          margin: 3px 2.5px;
+        }
+
+        /* Images now need to display centered above the rest of the text. The text-align in the .nav-item selector centers inline elements. */
+        .nav-image {
+          display: inline;
+          position: static;
+        }
+
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class='nav-item'>
+      <img class='nav-image' src='https://www.placehold.it/50/50'>
+      <h1 class='nav-title'>Title</h1>
+      <p class='nav-description'>This is a thing</p>
+    </div>
+
+    <div class='nav-item'>
+      <img class='nav-image' src='https://www.placehold.it/50/50'>
+      <h1 class='nav-title'>Title</h1>
+      <p class='nav-description'>This is a thing</p>
+    </div>
+
+    <div class='nav-item'>
+      <img class='nav-image' src='https://www.placehold.it/50/50'>
+      <h1 class='nav-title'>Title</h1>
+      <p class='nav-description'>This is a thing</p>
+    </div>
+
+    <div class='nav-item'>
+      <img class='nav-image' src='https://www.placehold.it/50/50'>
+      <h1 class='nav-title'>Title</h1>
+      <p class='nav-description'>This is a thing</p>
+    </div>
+
+    <div class='nav-item breakpoint'>
+      <img class='nav-image' src='https://www.placehold.it/50/50'>
+      <h1 class='nav-title'>Title</h1>
+      <p class='nav-description'>This is a thing</p>
+    </div>
+
+    <div class='nav-item'>
+      <img class='nav-image' src='https://www.placehold.it/50/50'>
+      <h1 class='nav-title'>Title</h1>
+      <p class='nav-description'>This is a thing</p>
+    </div>
+
+    <div class='nav-item'>
+      <img class='nav-image' src='https://www.placehold.it/50/50'>
+      <h1 class='nav-title'>Title</h1>
+      <p class='nav-description'>This is a thing</p>
+    </div>
+
+    <div class='nav-item'>
+      <img class='nav-image' src='https://www.placehold.it/50/50'>
+      <h1 class='nav-title'>Title</h1>
+      <p class='nav-description'>This is a thing</p>
+    </div>
+
+  </body>
+</html>

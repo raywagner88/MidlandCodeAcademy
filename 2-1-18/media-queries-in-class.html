@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First Look at Media Queries</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+      /* MOBILE CSS */
+      header, footer {
+        height: 100px;
+        background-color: red;
+      }
+
+      main {
+        height: 400px;
+        background-color: green;
+        padding: 5px;
+        position: relative;
+      }
+
+      main img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      main footer {
+        display: none;
+        height: 20px;
+        background-color: goldenrod;
+        position: absolute;
+        bottom: 0;
+      }
+
+      /* TABLET CSS */
+      @media(min-width: 320px){
+        header, footer {
+          background-color: #b0b0b0;
+        }
+
+        main img {
+          display: inline;
+          margin: 0 10px 10px 0;
+          float: left;
+        }
+
+        main footer {
+          display: block;
+        }
+      }
+
+      /* DESKTOP CSS */
+      @media(min-width: 600px){
+        header, footer {
+          background-color: red;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header>Header</header>
+
+    <main>
+      <img src='https://www.placehold.it/100/100'>
+      <p>
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+      </p>
+
+      <footer>Footer Goes Here</footer>
+    </main>
+
+    <footer>Footer</footer>
+
+  </body>
+</html>
