@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Flexbox Examples</title>
+    <style>
+      .container {
+        background-color: coral;
+        border: 5px dotted teal;
+        height: 500px;
+
+        /* start flexin' */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        align-items: stretch;
+      }
+
+      .child {
+        flex-grow: 1;
+        /* width: 100px; */
+        /* height: 100px; */
+        background-color: goldenrod;
+        margin: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #one {
+        flex-grow: 4;
+        order: 4;
+      }
+
+      #two {
+        order: 3;
+        display: none;
+      }
+
+      #three {
+        order: 5;
+      }
+
+      #four {
+        order: 1;
+      }
+
+      #five {
+        order: 2;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class='container'>
+      <div class='child' id='one'>One</div>
+      <div class='child' id='two'>Two</div>
+      <div class='child' id='three'>Three</div>
+      <div class='child' id='four'>Four</div>
+      <div class='child' id='five'>Five</div>
+    </div>
+
+  </body>
+</html>
