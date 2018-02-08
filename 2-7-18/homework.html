@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Homework from 2-6-18</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* mobile styles */
+      header {
+        background-color: #b0b0b0;
+        height: 60px;
+        padding-left: 25px;
+      }
+
+      header img {
+        display: none;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      .column {
+        height: 400px;
+        background-color: lightgray;
+        margin: 5px 0;
+        text-align: center;
+      }
+
+      #desktopOnly {
+        display: none;
+      }
+
+      .flexed {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* small tablet styles */
+      @media (min-width: 480px) {
+
+        .column {
+          margin: 5px 5px;
+        }
+
+        .main-column {
+          float: left;
+          width: calc(50% - 10px);
+        }
+
+        .container::after {
+          content: '';
+          clear: both;
+          display: table;
+        }
+
+      }
+
+      /* large tablet styles */
+      @media (min-width: 720px) {
+        .main-column {
+          width: auto;
+        }
+
+        .column {
+          float: left;
+          width: calc(33% - 10px);
+        }
+
+        .container::after {
+          clear: none;
+        }
+      }
+
+      /* desktop styles */
+      @media (min-width: 1080px) {
+        .column {
+          width: calc(25% - 10px);
+        }
+
+        #desktopOnly {
+          display: flex;
+        }
+
+        header.flexed {
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: 0;
+        }
+
+        header img {
+          display: inline;
+          width: 50px;
+          height: 50px;
+          margin: 0 25px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header class='flexed'>
+      <img src='http://www.placehold.it/50/50'>
+      <h1>Brand Name</h1>
+    </header>
+
+    <section class='container'>
+
+      <section class='column main-column flexed'> Section 1 </section>
+
+      <section class='column main-column flexed'> Section 2 </section>
+
+    </section>
+
+    <aside class='column flexed'>
+      Aside
+    </aside>
+
+    <aside class='column flexed' id='desktopOnly'> Desktop Only </aside>
+
+  </body>
+</html>

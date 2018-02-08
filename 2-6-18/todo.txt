@@ -1,0 +1,8 @@
+[X] Homework review
+[X] Intro To Flexbox
+[X] CSS property calc
+[ ] CSS property overflow
+[X] font-awesome
+[X] Github Account as homework
+[X] Facebook layout -> Github 
+[ ] DevTips flexbox video

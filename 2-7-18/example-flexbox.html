@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flexbox example</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style>
+
+      .container {
+        border: 5px solid coral;
+        background-color: #666;
+        height: 400px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .child {
+        /* width: 50px; */
+        background-color: goldenrod;
+        margin: 5px;
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        text-align: center;
+      }
+
+      .child:nth-child(1){
+        flex-grow: 2;
+      }
+
+      #poster {
+        height: 600px;
+        width: 400px;
+        background-image: url('http://fillmurray.com/400/600');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #000;
+      }
+
+      #poster h2 {
+        text-align: center;
+      }
+
+      #poster p {
+        text-align: right;
+        color: #FFF;
+      }
+
+      #card {
+        height: 3.5in;
+        width: 2.5in;
+        background-color: #f1f1f1;
+        border: 1px solid #b0b0b0;
+        padding: 10px;
+
+        box-shadow: 2px 2px 5px #000;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      #card p {
+        margin: 0;
+        font-size: 4em;
+      }
+
+      #card-icons {
+        align-self: center;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 50%;
+        flex-wrap: wrap;
+      }
+
+      .fa-gem {
+        font-size: 3em;
+      }
+
+      #bottom{
+        text-align: right;
+      }
+
+    </style>
+  </head>
+  <body>
+
+
+    <div class='container'>
+
+      <div class='child' id='main'>1</div>
+      <div class='child aside'>2</div>
+      <div class='child aside'>3</div>
+      <div class='child sidebar'>4</div>
+      <div class='child sidebar'>5</div>
+
+    </div>
+
+    <div id='poster'>
+      <h1>You think you know Bill Murray?</h1>
+      <h2>You thought wrong.</h2>
+      <p>The Real Bill. Coming April 12th</p>
+    </div>
+
+    <div id='card'>
+      <p id='top'>6</p>
+      <div id='card-icons'>
+        <i class="fas fa-gem"></i>
+        <i class="fas fa-gem"></i>
+        <i class="fas fa-gem"></i>
+        <i class="fas fa-gem"></i>
+        <i class="fas fa-gem"></i>
+        <i class="fas fa-gem"></i>
+      </div>
+      <p id='bottom'>6</p>
+    </div>
+
+
+
+  </body>
+</html>
